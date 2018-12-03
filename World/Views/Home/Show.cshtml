@@ -1,0 +1,8 @@
+<h1>the country you selected is: <h1>
+   @foreach(var country in Model)
+      {
+        <ul>
+          <li>Name:@country.GetCountryName()</li>
+          <li>Population:@country.GetPopulation()</li>
+        </ul>
+      }
