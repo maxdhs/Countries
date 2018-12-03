@@ -20,5 +20,21 @@ namespace World.Controllers
             return View("Show", allCountries);
         }
 
+
+        [HttpPost("/countryMinPopulation")]
+        public ActionResult minCreate(int countryMin)
+        {
+            List<Country> allCountries = Country.MinPopulationSize(countryMin);
+            return View("Show", allCountries);
+        }
+
+        
+        [HttpPost("/countryMaxPopulation")]
+        public ActionResult maxCreate(int countryMax)
+        {
+            List<Country> allCountries = Country.MaxPopulationSize(countryMax);
+            return View("Show", allCountries);
+        }
+
     }
 }

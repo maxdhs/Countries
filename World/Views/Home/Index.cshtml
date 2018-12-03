@@ -6,14 +6,18 @@
       <label for="countryName">Search for a country:</label>
       <input id="countryName" name="countryName" type="text">
       <button type="submit">Submit</button>
-    </form>
+</form>
 
+<h1>Only show countries with a population size greater than: <h1>
+<form action="/countryMinPopulation" method="post">
+      <label for="countryMin">Minimum population size:</label>
+      <input id="countryMin" name="countryMin" type="text">
+      <button type="submit">Submit</button>
+</form>
 
-
-   @foreach(var country in Model)
-      {
-        <ul>
-          <li>Name:@country.GetCountryName()</li>
-          <li>Population:@country.GetPopulation()</li>
-        </ul>
-      }
+<h1>Only show countries with a population size less than: <h1>
+<form action="/countryMaxPopulation" method="post">
+      <label for="countryMax">Maximun population size:</label>
+      <input id="countryMax" name="countryMax" type="text">
+      <button type="submit">Submit</button>
+</form>
